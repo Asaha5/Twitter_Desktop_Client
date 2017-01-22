@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter_Desktop.Main", "Twitter_Desktop.Main\Twitter_Desktop.Main.csproj", "{E502181B-2E11-4AC5-9DE7-81280FB816F6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3F6D188C-8818-4EF3-857A-8814E3A47463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter_Desktop.Modules.Home", "Twitter_Desktop.Modules.Home\Twitter_Desktop.Modules.Home.csproj", "{9CC123CF-746D-4A46-9FD5-8A1B59ED47B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{E502181B-2E11-4AC5-9DE7-81280FB816F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E502181B-2E11-4AC5-9DE7-81280FB816F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E502181B-2E11-4AC5-9DE7-81280FB816F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC123CF-746D-4A46-9FD5-8A1B59ED47B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC123CF-746D-4A46-9FD5-8A1B59ED47B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC123CF-746D-4A46-9FD5-8A1B59ED47B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC123CF-746D-4A46-9FD5-8A1B59ED47B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CC123CF-746D-4A46-9FD5-8A1B59ED47B6} = {3F6D188C-8818-4EF3-857A-8814E3A47463}
 	EndGlobalSection
 EndGlobal
