@@ -118,6 +118,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twitter_Desktop.Modules.Home\Twitter_Desktop.Modules.Home.csproj">
+      <Project>{9cc123cf-746d-4a46-9fd5-8a1b59ed47b6}</Project>
+      <Name>Twitter_Desktop.Modules.Home</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

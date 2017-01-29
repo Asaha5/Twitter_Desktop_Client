@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,12 @@ using System.Windows.Shapes;
 namespace Twitter_Desktop.Modules.Home
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for ProfileDetailsView.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    [Export()]
+    public partial class ProfileDetailsView : UserControl
     {
-        public UserControl1()
+        public ProfileDetailsView()
         {
             InitializeComponent();
         }

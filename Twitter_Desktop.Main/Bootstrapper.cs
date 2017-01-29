@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Twitter_Desktop.Modules.Home;
 
 namespace Twitter_Desktop.Main
 {
@@ -16,6 +17,7 @@ namespace Twitter_Desktop.Main
         {
             base.ConfigureAggregateCatalog();
             this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(Bootstrapper).Assembly));
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(HomeModule).Assembly));
         }
         protected override void ConfigureContainer()
         {
