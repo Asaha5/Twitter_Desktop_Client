@@ -4,37 +4,38 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Twitter_Desktop.Modules.Home"
+             xmlns:model="clr-namespace:Twitter_Desktop.Modules.Home.Models"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600">
+    <UserControl.Resources>
+        <DataTemplate x:Key="tastTemplate" DataType="{x:Type model:TaskDetails}">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Name of Task" Width="100"/>
+                    <TextBlock Text="{Binding Path=TaskName}" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Type of Task" Width="100"/>
+                    <TextBlock Text="{Binding Path=TaskType}" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Place of Task" Width="100"/>
+                    <TextBlock Name ="txtPlaceOfTask" Text="{Binding Path=TaskPlace}" Width="100" Foreground="Red"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Duration of Task" Width="100"/>
+                    <TextBlock Text="{Binding Path=Duration}" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding  Path=TaskPlace}" Value="Home">
+                    <Setter TargetName="txtPlaceOfTask" Property="Foreground" Value="Blue"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </UserControl.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding DataCollection}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Name of Task" Width="100"/>
-                            <TextBlock Text="{Binding Path=TaskName}" Width="100"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Type of Task" Width="100"/>
-                            <TextBlock Text="{Binding Path=TaskType}" Width="100"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Place of Task" Width="100"/>
-                            <TextBlock Name ="txtPlaceOfTask" Text="{Binding Path=TaskPlace}" Width="100" Foreground="Red"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Duration of Task" Width="100"/>
-                            <TextBlock Text="{Binding Path=Duration}" Width="100"/>
-                        </StackPanel>
-                    </StackPanel>
-                    <DataTemplate.Triggers>
-                        <DataTrigger Binding="{Binding  Path=TaskPlace}" Value="Home">
-                            <Setter TargetName="txtPlaceOfTask" Property="Foreground" Value="Blue"/>
-                        </DataTrigger>
-                    </DataTemplate.Triggers>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
+        <ListBox ItemsSource="{Binding DataCollection}" ItemTemplate="{StaticResource tastTemplate}">
         </ListBox>
     </Grid>
 </UserControl>
