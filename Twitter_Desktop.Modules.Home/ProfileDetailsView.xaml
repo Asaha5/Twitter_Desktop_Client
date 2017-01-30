@@ -7,6 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <TextBlock Text="Hi Nilanjana"/>
+        <ListBox ItemsSource="{Binding DataCollection}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=TaskName}" Width="100"/>
+                        <TextBlock Text="{Binding Path=TaskType}" Width="100"/>
+                        <TextBlock Text="{Binding Path=TaskPlace}" Width="100"/>
+                        <TextBlock Text="{Binding Path=Duration}" Width="100"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </UserControl>

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Twitter_Desktop.Modules.Home.ViewModels;
 
 namespace Twitter_Desktop.Modules.Home
 {
@@ -25,6 +26,7 @@ namespace Twitter_Desktop.Modules.Home
         public ProfileDetailsView()
         {
             InitializeComponent();
+            this.DataContext = new ProfileDetailsViewViewModel();
         }
     }
 }

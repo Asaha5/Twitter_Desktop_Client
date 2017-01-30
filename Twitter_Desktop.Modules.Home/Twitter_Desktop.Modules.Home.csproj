@@ -70,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HomeModule.cs" />
+    <Compile Include="Models\TaskDetails.cs" />
+    <Compile Include="ViewModels\ProfileDetailsViewViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProfileDetailsView.xaml.cs">
