@@ -36,6 +36,18 @@
     </UserControl.Resources>
     <Grid>
         <ListBox ItemsSource="{Binding DataCollection}" ItemTemplate="{StaticResource tastTemplate}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Control.Width" Value="200"/>
+                    <Setter Property="Control.Margin" Value="5"/>
+                    <Setter Property="Control.Background" Value="Yellow"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
         </ListBox>
     </Grid>
 </UserControl>
