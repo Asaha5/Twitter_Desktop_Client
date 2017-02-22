@@ -16,7 +16,6 @@ namespace Twitter_Desktop.Modules.Home
     public class HomeModule : IModule
     {
         private IRegionManager _regionManager;
-        //Sprivate CompositionContainer _container;
         [ImportingConstructor]
         public HomeModule(IRegionManager regionManager)
         {
